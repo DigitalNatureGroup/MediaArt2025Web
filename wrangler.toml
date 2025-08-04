@@ -1,6 +1,0 @@
-name = "mediaart2025web"
-compatibility_date = "2025-07-18"
-
-[pages]
-build = "bun run build"
-directory = "dist"
