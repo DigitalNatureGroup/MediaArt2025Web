@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@cloudflare/kv-asset-handler@0.4.0":
+"@cloudflare/kv-asset-handler@0.4.0", "@cloudflare/kv-asset-handler@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@cloudflare/kv-asset-handler/-/kv-asset-handler-0.4.0.tgz#a8588c6a2e89bb3e87fb449295a901c9f6d3e1bf"
   integrity sha512-+tv3z+SPp+gqTIcImN9o0hqE9xyfQjI1XD9pL6NuKjua9B1y7mNYv0S9cP+QEbA4ppVgGZEmKOvHX5G5Ei1CVA==
