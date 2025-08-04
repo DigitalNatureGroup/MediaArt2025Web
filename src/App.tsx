@@ -92,7 +92,7 @@ function App() {
             <div className="map-container">
               <iframe
                 title="筑波大学 春日エリア マップ"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.493881832084!2d140.0998868152772!3d36.1059238800449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60220dd9b5561731%3A0x8b82b5a53b15524!2z562J5rOi5aSn5a2mIOaZuua_pue0jOOCv-ODvOODsA!5e0!3m2!1sja!2sjp!4v1722696949174!5m2!1sja!2sjp"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.8280076150395!2d140.10385217586133!3d36.08615600762423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60220c7a26c9d217%3A0x65d055c542420670!2z562R5rOi5aSn5a2mIOetkeazouOCreODo-ODs-ODkeOCueaYpeaXpeOCqOODquOCog!5e1!3m2!1sja!2sjp!4v1754320580876!5m2!1sja!2sjp"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -106,13 +106,6 @@ function App() {
       </main>
 
       <footer>
-        <p>
-          詳しくは
-          <a href="https://www.tsukuba.ac.jp/" target="_blank" rel="noopener noreferrer">
-            大学のウェブサイト
-          </a>
-          をご覧ください。
-        </p>
       </footer>
     </>
   );

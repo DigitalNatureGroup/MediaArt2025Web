@@ -15,7 +15,12 @@ function WorkItem({ work, onClick }: WorkItemProps) {
       role="button"
       tabIndex={0}
     >
-      <img className="work-image" src={work.image} alt={work.title} />
+      <img 
+        className="work-image" 
+        src={work.image} 
+        alt={work.title}
+        loading="lazy"
+      />
       <div className="work-content">
         <h3 className="work-title">{work.title}</h3>
         <p className="work-artist">{work.artist}</p>

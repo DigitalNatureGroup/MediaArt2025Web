@@ -21,7 +21,12 @@ function Modal({ work, onClose }: ModalProps) {
         </button>
         <div className="modal-grid">
           <div className="modal-image-container">
-            <img src={work.image} alt={work.title} className="modal-image" />
+            <img 
+              src={work.image} 
+              alt={work.title} 
+              className="modal-image"
+              loading="lazy"
+            />
           </div>
           <div className="modal-info">
             <h2>{work.title}</h2>

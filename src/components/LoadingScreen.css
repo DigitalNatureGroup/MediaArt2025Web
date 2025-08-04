@@ -42,15 +42,33 @@
   transform-origin: center;
 }
 
-.logo-square:nth-child(1) { animation-delay: 0s; }
-.logo-square:nth-child(2) { animation-delay: 0.1s; }
-.logo-square:nth-child(3) { animation-delay: 0.2s; }
-.logo-square:nth-child(4) { animation-delay: 0.3s; }
-.logo-square:nth-child(5) { animation-delay: 0.4s; }
-.logo-square:nth-child(6) { animation-delay: 0.5s; }
-.logo-square:nth-child(7) { animation-delay: 0.6s; }
-.logo-square:nth-child(8) { animation-delay: 0.7s; }
-.logo-square:nth-child(9) { animation-delay: 0.8s; }
+.logo-square:nth-child(1) {
+  animation-delay: 0s;
+}
+.logo-square:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.logo-square:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.logo-square:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.logo-square:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.logo-square:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.logo-square:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.logo-square:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.logo-square:nth-child(9) {
+  animation-delay: 0.8s;
+}
 
 .loading-title {
   font-size: 3rem;
@@ -115,7 +133,8 @@
 }
 
 @keyframes logoSquarePulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.7;
   }
@@ -147,11 +166,11 @@
   .loading-title {
     font-size: 2.5rem;
   }
-  
+
   .progress-bar {
     width: 250px;
   }
-  
+
   .logo-grid {
     width: 70px;
     height: 70px;

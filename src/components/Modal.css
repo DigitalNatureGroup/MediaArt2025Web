@@ -15,9 +15,9 @@
 
 .modal-content {
   background: linear-gradient(145deg, var(--card-background), var(--surface-light));
-  width: 90%;
-  height: 90%;
-  max-width: 1400px;
+  width: 95vw;
+  height: 95vh;
+  max-width: none;
   border-radius: 20px;
   padding: 2rem;
   overflow: hidden;
@@ -37,12 +37,18 @@
 .modal-image-container {
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-image {
   width: 100%;
   height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .modal-info {
@@ -112,9 +118,12 @@
   }
 }
 
-.modal-image {
+.modal-image-container .modal-image {
   width: 100%;
   height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
