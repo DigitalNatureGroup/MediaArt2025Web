@@ -1,14 +1,29 @@
+import { useState } from 'react';
 import './App.css';
-import Hero from './components/Hero';
 import WorkList from './components/WorkList';
 import ParticleBackground from './components/ParticleBackground';
+import InteractiveGrid from './components/InteractiveGrid';
+import ScrollIndicator from './components/ScrollIndicator';
+import LoadingScreen from './components/LoadingScreen';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  }
+
   return (
     <>
       <ParticleBackground />
+      <InteractiveGrid />
+      <ScrollIndicator />
       <header>
-        <h1>GE72501「メディアアート」展示会2025</h1>
+        <h1>30² | メディアアート展示会2025</h1>
         <nav>
           <ul>
             <li>
@@ -26,19 +41,36 @@ function App() {
 
       <main>
         <section id="hero">
-          <Hero />
-          <h1 className="hero-title">GE72501「メディアアート」展示会2025</h1>
+          <h1 className="hero-title">30²</h1>
+          <p className="hero-subtitle">メディアアート展示会2025</p>
         </section>
 
         <section id="about">
           <h2>概要</h2>
-          <p>
-            <strong>会期:</strong> 2025年8月5日(火)
-          </p>
-          <p>
-            <strong>時間:</strong> 12:00 - 17:00
-          </p>
-          <p>メディアアートの新しい表現を探る展示会です。</p>
+          <div className="about-grid">
+            <div className="about-info-card">
+              <div className="info-icon">📅</div>
+              <h3>会期</h3>
+              <p>2025年8月5日(火)</p>
+            </div>
+            <div className="about-info-card">
+              <div className="info-icon">🕐</div>
+              <h3>時間</h3>
+              <p>12:00 - 17:00</p>
+            </div>
+            <div className="about-info-card">
+              <div className="info-icon">📍</div>
+              <h3>場所</h3>
+              <p>
+                筑波大学 春日エリア
+                <br />
+                7A101・7A103
+              </p>
+            </div>
+          </div>
+          <div className="about-description">
+            <p>30cm × 30cm という限られた空間の中で、私たちの想像力から生まれたメディアアートを表現する展示会です。</p>
+          </div>
         </section>
 
         <WorkList />

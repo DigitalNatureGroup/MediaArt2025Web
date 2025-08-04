@@ -8,24 +8,33 @@ function Hero() {
     if (!mountRef.current) return;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xffffff);
+    scene.background = new THREE.Color(0xf8fbff);
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     mountRef.current.appendChild(renderer.domElement);
 
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    // Lighting - softer, more diffused
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
     scene.add(ambientLight);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
     directionalLight.position.set(5, 10, 7.5);
+    directionalLight.castShadow = true;
     scene.add(directionalLight);
 
-    const geometries = [new THREE.BoxGeometry(1, 1, 1), new THREE.BoxGeometry(1, 2, 1), new THREE.BoxGeometry(2, 1, 1)];
+    const geometries = [
+      new THREE.BoxGeometry(1, 1, 1),
+      new THREE.BoxGeometry(1, 2, 1),
+      new THREE.BoxGeometry(2, 1, 1),
+      new THREE.CylinderGeometry(0.3, 0.3, 1.5, 8),
+      new THREE.SphereGeometry(0.4, 8, 6),
+    ];
     const materials = [
-      new THREE.MeshStandardMaterial({ color: 0x667eea, roughness: 0.4, metalness: 0.3 }),
-      new THREE.MeshStandardMaterial({ color: 0x764ba2, roughness: 0.4, metalness: 0.3 }),
-      new THREE.MeshStandardMaterial({ color: 0x00d4ff, roughness: 0.4, metalness: 0.3 }),
+      new THREE.MeshStandardMaterial({ color: 0xa8c8ec, roughness: 0.3, metalness: 0.1 }),
+      new THREE.MeshStandardMaterial({ color: 0xffb5b5, roughness: 0.3, metalness: 0.1 }),
+      new THREE.MeshStandardMaterial({ color: 0xb5e8b5, roughness: 0.3, metalness: 0.1 }),
+      new THREE.MeshStandardMaterial({ color: 0xffeb9c, roughness: 0.3, metalness: 0.1 }),
+      new THREE.MeshStandardMaterial({ color: 0xc4b5fd, roughness: 0.3, metalness: 0.1 }),
     ];
 
     const objects: THREE.Mesh[] = [];
@@ -103,9 +112,7 @@ function Hero() {
     };
   }, []);
 
-  return (
-    <div ref={mountRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1, width: '100vw', height: '100vh' }} />
-  );
+  return null;
 }
 
 export default Hero;
