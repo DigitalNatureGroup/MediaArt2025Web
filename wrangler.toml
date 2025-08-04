@@ -1,6 +1,9 @@
 name = "mediaart2025web"
 compatibility_date = "2025-07-18"
+main = "src/worker.ts"
 
-[pages]
-build = "bun run build"
-directory = "dist"
+[build]
+command = "npm run build"
+
+[site]
+bucket = "./dist"
