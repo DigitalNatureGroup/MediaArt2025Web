@@ -3,6 +3,7 @@ import './App.css';
 import WorkList from './components/WorkList';
 import ParticleBackground from './components/ParticleBackground';
 import InteractiveGrid from './components/InteractiveGrid';
+import Poster3D from './components/Poster3D';
 import ScrollIndicator from './components/ScrollIndicator';
 import LoadingScreen from './components/LoadingScreen';
 
@@ -35,6 +36,9 @@ function App() {
             <li>
               <a href="#access">アクセス</a>
             </li>
+            <li>
+              <a href="#interactive-3d">インタラクティブ3D</a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -44,6 +48,8 @@ function App() {
           <h1 className="hero-title">30²</h1>
           <p className="hero-subtitle">メディアアート展示会2025</p>
         </section>
+
+        
 
         <section id="about">
           <h2>概要</h2>
@@ -103,7 +109,13 @@ function App() {
             </div>
           </div>
         </section>
+
+        
       </main>
+
+      <section id="interactive-3d" className="interactive-3d-section">
+        <Poster3D />
+      </section>
 
       <footer>
       </footer>
